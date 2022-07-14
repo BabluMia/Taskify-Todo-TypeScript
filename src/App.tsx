@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
+import InputFeild from './Components/InputFeild';
 
-function App() {
+const App:React.FC =()=> {
+  const [todo,setTodo] = useState<string>('')
   return (
-    <div >
-     
+    <div className='App'>
+    <span className='header'>TASKIFY</span>
+    <InputFeild todo={todo} setTodo={setTodo} />
     </div>
   );
 }
