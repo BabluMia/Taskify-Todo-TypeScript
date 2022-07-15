@@ -6,10 +6,10 @@ type TodoType = {
 }
 
 const InputFeild:React.FC<TodoType> = ({todo,setTodo}:TodoType) => {
-   
+   console.log(todo);
   return (
     <form action=""  className='input'>
-        <input type="text" placeholder='Inter A Task' name='task' className='input_box' />
+        <input type="text" value={todo} onChange={(e)=>{setTodo(e.target.value)}} placeholder='Inter A Task' name='task' className='input_box' />
         <button type='submit'  className='input_submit'>Go</button>
     </form>
   )
